@@ -41,7 +41,7 @@ var snake;
             fruit.pickLocation();
         }
         
-    },this.vel)
+    },50)
     console.log(vel);
 
 
