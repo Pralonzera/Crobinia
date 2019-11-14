@@ -10,7 +10,7 @@ const dirt = document.getElementById("dirt")
 var  tert = 0;
 
 
-this.vel = 50;
+this.vel = 250;
 
 var snake;
 
