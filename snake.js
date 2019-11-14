@@ -6,6 +6,8 @@ function Snake() {
     this.ySpeed = 0;
     this.total = 0;
     this.tail = [];
+    this.direct = 0;
+    this.comidas = 0;
 
 
 
@@ -44,25 +46,40 @@ function Snake() {
         }
     }
 
-    this.changeDirection = function(direction){
-        switch(direction){
-            case 'Up': 
-            this.xSpeed = 0;
-            this.ySpeed = -scale * 1;
-            break;
-            case 'Down': 
-            this.xSpeed = 0;
-            this.ySpeed = scale * 1;
-            break;
-            case 'Left': 
-            this.xSpeed = -scale * 1;
-            this.ySpeed = 0;
-            break;
-            case 'Right': 
-            this.xSpeed = scale * 1;
-            this.ySpeed = 0;
-            break;
+    this.changeDirection = function(direct, direction){
+        switch(direct){
+            case 0:
+                switch(direction){
+                    case 'Up': 
+                    this.xSpeed = 0;
+                    this.ySpeed = -scale * 1;
+                    this.direct = 1;
+                    break;
+                    case 'Down': 
+                    this.xSpeed = 0;
+                    this.ySpeed = scale * 1;
+                    this.direct = 1;
+                    break;
+                    }
+
+                break;
+
+            case 1:
+                switch(direction){
+                    case 'Left': 
+                    this.xSpeed = -scale * 1;
+                    this.ySpeed = 0;
+                    this.direct = 0;
+                    break;
+                    case 'Right': 
+                    this.xSpeed = scale * 1;
+                    this.ySpeed = 0;
+                    this.direct = 0;
+                    break;
+                    }
+                    break;
         }
+       
     }
 
     
@@ -71,6 +88,7 @@ function Snake() {
 
       
         if(this.x === fruit.xFruit && this.y === fruit.yFruit){
+            this.comidas++;
             this.total++;
             return true;
         }

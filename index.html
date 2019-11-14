@@ -5,14 +5,44 @@
     <meta>
     <meta>
     <title>Jogo da cobrinha</title>
+    <style>
+
+     button#baixo{
+         position: absolute;
+         top:420px;
+         left: 0;
+         padding: 27px; 
+         
+     }   
+     button#cima{
+         position:absolute;
+         top:320px;
+         left: 0px;
+         padding: 30px;
+     }  
+     button#esq{
+         padding: 30px;
+     } 
+     button#dirt{
+         padding: 30px;
+     } 
+
+
+    </style>
 </head>
 <body>
     <canvas class ="canvas" height="300" width="300" style="background-color: #a4d87a;border: 2px; border-style: solid;border-color: lightslategray;"></canvas>
+    <button id = "baixo">BAIXO</button>
+    <button id = "cima">CIMA</button>
+    <button id = "esq">TOP</button>
+    <button id = "dirt">BOT</button>
 </body>
 <script type="text/javascript" src="fruit.js"></script>
 <script type="text/javascript" src="snake.js"></script>
 <script type="text/javascript" src="draw.js"></script>
 </html>
+
+
 
 
 
